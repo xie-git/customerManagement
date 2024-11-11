@@ -1,8 +1,7 @@
 package com.example.customerManagement;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
-
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Map;
 
@@ -15,7 +14,9 @@ public class Transaction {
 
     private Double amount;
 
-    private LocalDateTime transactionDate;
+    private LocalDateTime transactionDateAdded;
+
+    private LocalDate transactionDate;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
@@ -32,13 +33,13 @@ public class Transaction {
 
     public Transaction() {}
 
-    public Transaction(Double amount, LocalDateTime transactionDate, Customer customer, Map<CookieType, Integer> cookies) {
+    public Transaction(Double amount, LocalDateTime transactionDateAdded, LocalDate transactionDate, Customer customer, Map<CookieType, Integer> cookiesQuantities) {
         this.amount = amount;
+        this.transactionDateAdded = transactionDateAdded;
         this.transactionDate = transactionDate;
         this.customer = customer;
         this.cookiesQuantities = cookiesQuantities;
     }
-
 
     public Long getId() {
         return id;
@@ -56,11 +57,19 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public LocalDateTime getTransactionDate() {
+    public LocalDateTime getTransactionDateAdded() {
+        return transactionDateAdded;
+    }
+
+    public void setTransactionDateAdded(LocalDateTime transactionDateAdded) {
+        this.transactionDateAdded = transactionDateAdded;
+    }
+
+    public LocalDate getTransactionDate() {
         return transactionDate;
     }
 
-    public void setTransactionDate(LocalDateTime transactionDate) {
+    public void setTransactionDate(LocalDate transactionDate) {
         this.transactionDate = transactionDate;
     }
 
@@ -70,5 +79,13 @@ public class Transaction {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public Map<CookieType, Integer> getCookiesQuantities() {
+        return cookiesQuantities;
+    }
+
+    public void setCookiesQuantities(Map<CookieType, Integer> cookiesQuantities) {
+        this.cookiesQuantities = cookiesQuantities;
     }
 }
