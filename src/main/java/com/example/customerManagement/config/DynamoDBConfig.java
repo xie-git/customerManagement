@@ -1,4 +1,4 @@
-package com.example.customerManagement;
+package com.example.customerManagement.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

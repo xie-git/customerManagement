@@ -1,4 +1,4 @@
-package com.example.customerManagement;
+package com.example.customerManagement.util;
 
 import java.io.BufferedReader;
 import java.io.File;

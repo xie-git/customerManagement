@@ -1,4 +1,4 @@
-package com.example.customerManagement;
+package com.example.customerManagement.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -28,6 +28,7 @@ public class Transaction {
     @Column(name = "quantity")
     @Enumerated(EnumType.STRING)
     private Map<CookieType, Integer> cookiesQuantities;
+
 
     // Constructors, getters, and setters
 

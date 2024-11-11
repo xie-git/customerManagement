@@ -1,5 +1,6 @@
-package com.example.customerManagement;
+package com.example.customerManagement.service;
 
+import com.example.customerManagement.util.CodeMetrics;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 import software.amazon.awssdk.services.dynamodb.model.PutItemRequest;

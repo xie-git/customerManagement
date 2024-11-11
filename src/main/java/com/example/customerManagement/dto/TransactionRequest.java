@@ -1,4 +1,6 @@
-package com.example.customerManagement;
+package com.example.customerManagement.dto;
+
+import com.example.customerManagement.entity.CookieType;
 
 import java.util.Map;
 

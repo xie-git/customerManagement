@@ -1,5 +1,10 @@
-package com.example.customerManagement;
+package com.example.customerManagement.service;
 
+import com.example.customerManagement.entity.CookieType;
+import com.example.customerManagement.entity.Customer;
+import com.example.customerManagement.entity.Transaction;
+import com.example.customerManagement.repository.CustomerRepository;
+import com.example.customerManagement.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

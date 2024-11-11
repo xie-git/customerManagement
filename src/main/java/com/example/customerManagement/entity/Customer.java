@@ -1,4 +1,4 @@
-package com.example.customerManagement;
+package com.example.customerManagement.entity;
 
 import jakarta.persistence.*;
 

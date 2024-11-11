@@ -1,5 +1,7 @@
-package com.example.customerManagement;
+package com.example.customerManagement.controller;
 
+import com.example.customerManagement.entity.Customer;
+import com.example.customerManagement.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

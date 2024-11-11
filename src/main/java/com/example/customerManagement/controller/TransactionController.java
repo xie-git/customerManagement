@@ -1,5 +1,8 @@
-package com.example.customerManagement;
+package com.example.customerManagement.controller;
 
+import com.example.customerManagement.entity.Transaction;
+import com.example.customerManagement.dto.TransactionRequest;
+import com.example.customerManagement.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
