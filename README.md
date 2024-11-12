@@ -8,6 +8,6 @@ This project is a Customer Management System incorporating a RESTful API with Sp
 - **Java 17** with Spring Boot for API development
 - **JPA** for ORM and PostgreSQL for persistent storage
 - **Docker** for containerization, allowing for consistent deployment environments
-- **AWS ECS** to manage containers
+- **AWS ECS ** to manage containers
 - **AWS EC2** and **RDS** for cloud hosting and managed database services
 - **AWS Lambda** (Python) to perform data transformations and ETL tasks using PySpark
