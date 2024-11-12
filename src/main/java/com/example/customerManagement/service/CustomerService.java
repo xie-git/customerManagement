@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import org.springframework.data.domain.Pageable; // Correct import for Pageable
+
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -40,5 +42,38 @@ public class CustomerService {
         } else {
             return customerRepository.findAll(pageable);
         }
+    }
+
+    public Optional<Customer> updateCustomer(Long id, Customer customer) {
+        return customerRepository.findById(id)
+                .map(existingCustomer -> {
+                    existingCustomer.setName(customer.getName());
+                    existingCustomer.setEmail(customer.getEmail());
+                    existingCustomer.setPhone(customer.getPhone());
+                    // Add more fields if needed
+                    return customerRepository.save(existingCustomer);
+                });
+    }
+
+
+    public Optional<Customer> partialUpdateCustomer(Long id, Map<String, Object> updates) {
+        return customerRepository.findById(id)
+                .map(existingCustomer -> {
+                    updates.forEach((field, value) -> {
+                        switch (field) {
+                            case "name":
+                                existingCustomer.setName((String) value);
+                                break;
+                            case "email":
+                                existingCustomer.setEmail((String) value);
+                                break;
+                            case "phone":
+                                existingCustomer.setPhone((String) value);
+                                break;
+                            // Add more cases for each updatable field
+                        }
+                    });
+                    return customerRepository.save(existingCustomer);
+                });
     }
 }
