@@ -10,4 +10,5 @@ This project is a Customer Management System incorporating a RESTful API with Sp
 - **Docker** for containerization, allowing for consistent deployment environments
 - **AWS ECS** to manage containers
 - **AWS EC2** and **RDS** for cloud hosting and managed database services
+- **AWS CodeBuild and AWS CodePipeline** for CI/CD
 - **AWS Lambda** (Python) to perform data transformations and ETL tasks using PySpark
